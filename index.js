@@ -1,18 +1,9 @@
 const {
-  fetchMyIP
-} = require('./iss');
-const {
-  fetchCoordsByIP
-} = require('./iss');
-const {
-  fetchISSFlyOverTimes
-} = require('./iss');
-const {
   nextISSTimesForMyLocation
 } = require('./iss');
 
 
-const printPassTimes = function (passes) {
+const printPassTimes = function(passes) {
   for (const pass of passes) {
     const datetime = new Date(0);
     datetime.setUTCSeconds(pass.risetime);
